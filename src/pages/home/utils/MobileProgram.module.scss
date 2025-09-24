@@ -1,0 +1,176 @@
+@use '../../../mixins/responsive.scss' as *;
+.container {
+  background: rgba(38, 39, 40, 1);
+  border-radius: 56px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  @include res(mobsm){
+    border-radius: 32px;
+  }
+  @include res(mobmd){
+    border-radius: 32px;
+  }
+
+  .left {
+    z-index: 1;
+    max-width: 576px;
+    p {
+      font-family: "NeueRegular";
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 100%;
+      letter-spacing: -0.2px;
+      color: rgba(255, 255, 255, 1);
+      margin-bottom: 16px;
+      @include res(mobsm) {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        margin-bottom: 10px;
+      }
+
+      @include res(mobmd) {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        margin-bottom: 10px;
+      }
+
+
+    }
+
+    span {
+      font-family: "NeueRegular";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.16px;
+      color: rgba(207, 207, 207, 1);
+      display: inline-block;
+      margin-bottom: 48px;
+      @include res(mobsm) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.24px;
+        margin-bottom: 30px;
+      }
+
+      @include res(mobsm) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.24px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .mobile_container {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    height: 100%;
+    // padding: 95px 0;
+    // height: 100vh;
+    // overflow: hidden;
+    @include res(mobsm) {
+      flex-direction: column;
+      position: relative;
+      padding: 88px 0;
+      justify-content: center;
+    }
+
+    @include res(mobmd) {
+      flex-direction: column;
+      position: relative;
+      padding: 88px 0;
+    }
+
+    .right {
+      display: flex;
+      gap: 96px;
+      flex:1;
+      display: flex;
+      .marquee{
+        flex:1;
+        img{
+          width: 100%;
+        }
+      }
+      @include res(mobsm) {
+        position: absolute;
+        display: flex;
+        position: absolute;
+        img{
+          width: 144px;
+          height: 311px;
+        }
+        top: -512px;
+        left: -327px;
+        transform: rotate3d(1, 1, 2, 45deg);
+      }
+      @include res(mobmd) {
+        position: absolute;
+        display: none;
+       
+      }
+    }
+  }
+}
+
+
+
+@keyframes marqueeUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes marqueeUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes marqueeDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  height: 300px; // Konteynerin hündürlüyü
+  position: relative;
+  height: 100%;
+
+  .marqueeInner {
+    display: flex;
+    flex-direction: column;
+    animation: marqueeUp 10s linear infinite;
+    height: 100%;
+  }
+  .marqueeDown{
+    animation: marqueeDown 10s linear infinite;
+  }
+
+  img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,46 @@
+@use '../../../mixins/responsive.scss' as *;
+
+.container {
+  background: rgba(38, 39, 40, 1);
+  border-radius: 56px;
+  padding: 144px 0;
+  @include res(mob) {
+    padding: 88px 0;
+    border-radius: 32px;
+  }
+
+  .title {
+    display: flex;
+    gap: 205px;
+    @include res(mob) {
+      flex-direction: column;
+      gap: 30px;
+    }
+    p {
+      font-family: NeueRegular;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22.7px;
+      letter-spacing: 0.16px;
+      color: rgba(183, 183, 183, 1);
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.08px;
+      }
+    }
+  }
+  .cardImageSection{
+    @include res(mob){
+        display: flex;
+        justify-content: center;
+    }
+  }
+  .cardImage {
+    
+    @include res(mob) {
+      max-width: 254px;
+    }
+  }
+}

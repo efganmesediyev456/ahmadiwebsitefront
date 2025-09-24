@@ -1,0 +1,81 @@
+@use '../../../mixins/responsive.scss' as *;
+.container {
+    background: rgba(38, 39, 40, 1);
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+    height: calc(100vh - 96px);
+    @include res(mobsm){
+        height: calc(100vh - 64px);
+        border-bottom-left-radius: 32px;
+        border-bottom-right-radius: 32px;
+    }
+    @include res(mobmd){
+        height: calc(100vh - 64px);
+        border-bottom-left-radius: 32px;
+        border-bottom-right-radius: 32px;
+    }
+
+    .we_create {
+        font-family: "NeueRegular";
+        font-weight: 400;
+        font-size: 72px;
+        line-height: 84px;
+        letter-spacing: -1.5px;
+        color: rgba(255, 255, 255, 1);
+        max-width: 900px;
+        margin-bottom: 96px;
+        opacity: 1;
+
+        @include res(mobsm) {
+            padding-top:60px;
+            margin-bottom: 60px;
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 44px;
+            letter-spacing: -0.2px;
+        }
+        @include res(mobmd) {
+            padding-top:60px;
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 44px;
+            letter-spacing: -0.2px;
+            margin-bottom: 60px;
+        }
+    }
+
+    .row2 {
+        display: flex;
+        justify-content: end;
+
+        .row2_position {
+            max-width: 619px;
+
+            p {
+                font-family: "NeueRegular";
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0.16px;
+                color: rgba(231, 231, 231, 1);
+                margin-bottom: 48px;
+                @include res(mobsm){
+                    margin-bottom: 30px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 21px;
+                    letter-spacing: 0.24px;
+                }
+
+                @include res(mobmd) {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 21px;
+                    letter-spacing: 0.24px;
+                    margin-bottom: 30px;
+                }
+            
+            }
+        }
+    }
+}

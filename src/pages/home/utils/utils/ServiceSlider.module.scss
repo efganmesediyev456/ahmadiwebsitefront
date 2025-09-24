@@ -1,0 +1,44 @@
+@use '../../../../mixins/responsive.scss' as *;
+.container {
+  margin-top: 48px;
+  margin-bottom: 32px;
+
+  @include res(mobsm) {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  @include res(mobmd){
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .slideritem {
+    font-family: "NeueRegular";
+    font-weight: 400;
+    font-size: 18px;
+    leading-trim: Cap height;
+    line-height: 100%;
+    letter-spacing: 0.16px;
+    padding: 36px 44px;
+    border: 1px solid rgba(231, 231, 231, 1);
+    border-radius: 28px;
+    width: max-content;
+    color: rgba(38, 39, 40, 1);
+    @include res(mobsm) {
+      font-weight: 400;
+      font-size: 14px;
+      leading-trim: Cap height;
+      line-height: 100%;
+      letter-spacing: 0.24px;
+      padding: 28px 36px;
+    }
+
+    @include res(mobmd) {
+      font-weight: 400;
+      font-size: 14px;
+      leading-trim: Cap height;
+      line-height: 100%;
+      letter-spacing: 0.24px;
+      padding: 28px 36px;
+    }
+  }
+}

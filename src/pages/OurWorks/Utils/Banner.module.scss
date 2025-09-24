@@ -1,0 +1,52 @@
+@use '../../../mixins/responsive.scss' as *;
+
+.banner_top {
+    font-weight: 400;
+    font-size: 192px;
+    line-height: 223px;
+    letter-spacing: -5px;
+    color: rgba(255, 255, 255, 1);
+    padding-top: 96px;
+    @include res(tab){
+        font-weight: 400;
+        font-size: 96px;
+        line-height: 112px;
+        letter-spacing: -1.5px;
+        padding-top:72px;
+    }
+}
+
+.banner_bottom {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.16px;
+    color: rgba(255, 255, 255, 1);
+    max-width: 523px;
+    @include res(tab){
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.16px;
+        max-width: 348px;
+    }
+
+}
+.banner_right{
+    margin-top:96px;
+    display: flex;
+    justify-content: flex-end;
+    @include res(tab){
+        margin-top:72px;
+    }
+}
+
+.banner{
+    background: rgba(38, 39, 40, 1);
+    border-bottom-right-radius: 56px;
+    border-bottom-left-radius: 56px;
+    height: calc(100vh - 96px);
+    @include res(tab){
+        height: calc(100vh - 76px);
+    }
+}

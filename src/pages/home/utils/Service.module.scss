@@ -1,0 +1,29 @@
+@use '../../../mixins/responsive.scss' as *;
+.container{
+    background: rgba(255, 255, 255, 1);
+    padding-top:144px;
+    padding-bottom: 125px;
+    border-radius: 56px;
+    @include res(mobsm){
+        border-radius: 32px;
+        padding-top:88px;
+        padding-bottom: 88px;
+    }
+    @include res(mobmd){
+        border-radius: 32px;
+        padding-top:88px;
+        padding-bottom: 88px;
+    }
+    .centermode{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top:96px;
+        @include res(mobsm){
+            margin-top:60px;
+        }
+        @include res(mobmd){
+            margin-top:60px;
+        }
+    }
+}

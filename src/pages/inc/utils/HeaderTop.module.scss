@@ -1,0 +1,130 @@
+@use '../../../mixins/responsive.scss' as *;
+
+.logoImage{
+  max-height: 35px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 0;
+  @include res(mobsm) {
+    padding: 20px 0;
+  }
+  @include res(mob) {
+    padding: 20px 0;
+  }
+  @include res(mobmd) {
+    padding: 20px 0;
+  }
+  @include res(tab) {
+    padding: 24px 0;
+  }
+  .logo {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    @include res(mobsm) {
+      height: 24px;
+      width: 40px;
+    }
+    @include res(mob) {
+      width: 40.60081481933594px;
+      height: 24px;
+    }
+    @include res(mobmd) {
+      width: 40.60081481933594px;
+      height: 24px;
+    }
+    @include res(tab) {
+      width: 47.367618560791016px;
+      height: 28px;
+    }
+  }
+
+  .menu_and_langauges {
+    display: flex;
+    align-items: center;
+    .languages {
+      a {
+        font-size: 14px;
+        line-height: 19.9px;
+        font-weight: 400;
+        letter-spacing: 0.08px;
+        font-family: "NeueRegular";
+        color: rgba(255, 255, 255, 1);
+        text-decoration: unset;
+
+        @include res(mob) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19.9px;
+          letter-spacing: 0.08px;
+        }
+        @include res(mobmd) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19.9px;
+          letter-spacing: 0.08px;
+        }
+      }
+      .language_dropdown {
+        display: none;
+      }
+    }
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .menu_open {
+    font-family: "NeueRegular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.9px;
+    letter-spacing: 0.08px;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include res(mob) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19.9px;
+      letter-spacing: 0.08px;
+    }
+    @include res(mobmd) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19.9px;
+        letter-spacing: 0.08px;
+      }
+  }
+  .menu_center {
+    @include res(mobsm) {
+      display: none;
+    }
+    @include res(mob) {
+      display: none;
+    }
+    @include res(mobmd) {
+      display: none;
+    }
+    a {
+      text-decoration: unset;
+      line-height: 19.9px;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: "NeueRegular";
+      color: rgba(255, 255, 255, 1);
+       @include res(mob) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19.9px;
+      letter-spacing: 0.08px;
+    }
+    }
+  }
+}

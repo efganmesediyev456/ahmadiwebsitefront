@@ -1,0 +1,762 @@
+@import "../../mixins/responsive.scss";
+.footer {
+  background: rgba(38, 39, 40, 1);
+  border-top-left-radius: 56px;
+  border-top-right-radius: 56px;
+  padding: 144px 32px 32px 32px;
+  @include res(mobsm) {
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    padding: 88px 0 116px 0;
+  }
+  @include res(mob) {
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    padding: 88px 0 116px 0;
+  }
+  @include res(tab){
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    padding: 112px 0 24px 0;
+
+  }
+
+  .flexItems {
+    display: flex;
+    gap: 292px;
+    @include res(mobsm) {
+      flex-direction: column;
+      gap: 16px;
+    }
+    @include res(mob) {
+      flex-direction: column;
+      gap: 16px;
+    }
+    @include res(tab) {
+      flex-direction: column;
+      gap:18px;
+    }
+    .footer2 {
+      column-gap: 247px;
+      display: grid;
+      row-gap: 64px;
+      grid-template-columns: max-content 1fr;
+      @include res(mobsm) {
+        column-gap: 18px;
+      }
+      @include res(mob) {
+        column-gap: 18px;
+        row-gap: 40px;
+      }
+      @include res(tab){
+        column-gap: 137px;
+        row-gap: 48px;
+      }
+    }
+  }
+
+  .footer1 {
+    .contact {
+      font-family: "Neueregular";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22.7px;
+      letter-spacing: 0.16px;
+      color: rgba(183, 183, 183, 1);
+      @include res(mobsm) {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.08px;
+      }
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.08px;
+      }
+      @include res(tab){
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19.9px;
+          letter-spacing: 0.08px;
+      }
+    }
+  }
+
+  .item {
+    width: max-content;
+
+    span.letter {
+      font-family: "NeueRegular";
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 100%;
+      letter-spacing: -0.2px;
+      color: rgba(255, 255, 255, 1);
+      @include res(mobsm) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0px;
+      }
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0px;
+      }
+     @include res(tab){
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: -0.2px;
+     }
+
+    }
+
+    .letterFlex {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      @include res(mobsm) {
+        gap: 16px;
+      }
+      @include res(mob) {
+        gap: 16px;
+      }
+      @include res(tab) {
+        gap: 16px;
+      }
+   
+
+    }
+
+    .startProject {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      svg {
+        @include res(mobsm) {
+          width: 28px;
+          height: 28px;
+        }
+        @include res(mob) {
+          width: 28px;
+          height: 28px;
+        }
+      }
+      
+
+      span {
+        font-family: "NeueRegular";
+        font-weight: 400;
+        font-size: 38px;
+        leading-trim: Cap height;
+        line-height: 100%;
+        letter-spacing: -0.2px;
+        color: rgba(0, 56, 255, 1);
+        @include res(mobsm) {
+          font-weight: 400;
+          font-size: 20px;
+          leading-trim: Cap height;
+          line-height: 100%;
+          letter-spacing: 0px;
+        }
+        @include res(mob) {
+          font-weight: 400;
+          font-size: 20px;
+          leading-trim: Cap height;
+          line-height: 100%;
+          letter-spacing: 0px;
+        }
+        @include res(tab){
+          font-weight: 400;
+          font-size: 32px;
+          leading-trim: Cap height;
+          line-height: 100%;
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+
+    .socials {
+      p {
+        font-family: "NeueRegular";
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 100%;
+        letter-spacing: -0.2px;
+        color: white;
+        @include res(mobsm) {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 0px;
+        }
+        @include res(mob) {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 0px;
+        }
+       @include res(tab){
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 100%;
+          letter-spacing: -0.2px;
+          margin-bottom: 12px;
+       }
+
+        span {
+          color: rgba(0, 56, 255, 1);
+        }
+      }
+
+      .flexWhatsap {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        @include res(mobsm) {
+          flex-direction: column;
+          gap: 18px;
+          align-items: flex-start;
+          margin-top: 10px;
+        }
+
+        @include res(mob) {
+          flex-direction: column;
+          gap: 18px;
+          align-items: flex-start;
+          margin-top: 10px;
+        }
+       
+
+        a {
+          display: flex;
+          align-items: center;
+
+          span {
+            font-family: "NeueRegular";
+            font-weight: 400;
+            font-size: 38px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -0.2px;
+            color: rgba(0, 56, 255, 1);
+            @include res(mobsm) {
+              svg {
+                width: 28px;
+                height: 28px;
+              }
+              font-weight: 400;
+              font-size: 20px;
+              leading-trim: Cap height;
+              line-height: 100%;
+              letter-spacing: 0px;
+            }
+
+            @include res(mob) {
+              svg {
+                width: 28px;
+                height: 28px;
+              }
+              font-weight: 400;
+              font-size: 20px;
+              leading-trim: Cap height;
+              line-height: 100%;
+              letter-spacing: 0px;
+            }
+
+            @include res(tab) {
+              svg {
+                width: 40px;
+                height: 40px;
+              }
+              font-weight: 400;
+              font-size: 32px;
+              leading-trim: Cap height;
+              line-height: 100%;
+              letter-spacing: -0.2px;
+            }
+          }
+        }
+      }
+    }
+
+    .number {
+      font-family: "NeueRegular";
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 100%;
+      letter-spacing: -0.2px;
+      color: white;
+      margin-bottom: 6px;
+      @include res(mobsm) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0px;
+      }
+
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0px;
+      }
+      @include res(tab){
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 100%;
+          letter-spacing: -0.2px;
+          margin-bottom: 12px;
+      }
+    }
+
+    .social_platforms {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      gap: 32px;
+      @include res(mobsm) {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      @include res(mob) {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      @include res(tab){
+        column-gap: 47px;
+        row-gap: 18px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        @include res(mobsm) {
+          svg {
+            width: 28px;
+            height: 28px;
+          }
+        }
+
+        @include res(mob) {
+          svg {
+            width: 28px;
+            height: 28px;
+          }
+        }
+
+        span {
+          font-family: "NeueRegular";
+          font-weight: 400;
+          font-size: 38px;
+          leading-trim: Cap height;
+          line-height: 100%;
+          letter-spacing: -0.2px;
+          color: rgba(0, 56, 255, 1);
+          @include res(mobsm) {
+            font-weight: 400;
+            font-size: 20px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: 0px;
+          }
+          @include res(mob) {
+            font-weight: 400;
+            font-size: 20px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: 0px;
+          }
+          @include res(tab){
+              font-weight: 400;
+              font-size: 32px;
+              leading-trim: Cap height;
+              line-height: 100%;
+              letter-spacing: -0.2px;
+          }
+        }
+      }
+    }
+
+    .address {
+      font-family: "NeueRegular";
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 54px;
+      letter-spacing: -0.2px;
+      color: white;
+      max-width: 462px;
+      @include res(mobsm) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 29px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        max-width: 197px;
+        margin-bottom: 16px;
+      }
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 29px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        max-width: 197px;
+        margin-bottom: 16px;
+      }
+      @include res(tab){
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 45px;
+        letter-spacing: -0.2px;
+        margin-bottom: 16px;
+
+      }
+    }
+
+    .google {
+      display: flex;
+      align-items: center;
+      @include res(mobsm) {
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+      @include res(mob) {
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      span {
+        font-family: "NeueRegular";
+        font-weight: 400;
+        font-size: 38px;
+        leading-trim: Cap height;
+        line-height: 100%;
+        letter-spacing: -0.2px;
+        color: rgba(0, 56, 255, 1);
+        @include res(mobsm) {
+          font-weight: 400;
+          font-size: 20px;
+          leading-trim: Cap height;
+          line-height: 100%;
+          letter-spacing: 0px;
+        }
+        @include res(mob) {
+          font-weight: 400;
+          font-size: 20px;
+          leading-trim: Cap height;
+          line-height: 100%;
+          letter-spacing: 0px;
+        }
+        @include res(tab) {
+          font-weight: 400;
+          font-size: 32px;
+          leading-trim: Cap height;
+          line-height: 100%;
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+
+    .footerAuthor {
+      font-family: "NeueRegular";
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 100%;
+      letter-spacing: -0.2px;
+      color: white;
+      @include res(mobsm) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0px;
+      }
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0px;
+      }
+      @include res(tab){
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: -0.2px;
+      }
+    }
+  }
+  .showInMobile {
+    display: none;
+  }
+
+  .showInMobile {
+    @include res(mobsm) {
+      display: block;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0px;
+      color: rgba(255, 255, 255, 1);
+    }
+    @include res(mob) {
+      display: block;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0px;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  @include res(mobsm) {
+    .hideInMobile {
+      display: none;
+    }
+  }
+}
+
+.whiteMode {
+  background-color: white;
+
+  .letter {
+    color: rgba(38, 39, 40, 1) !important;
+  }
+
+  .hello,
+  .number,
+  .address,
+  .footerAuthor {
+    color: rgba(38, 39, 40, 1) !important;
+  }
+
+  .startProject span {
+    color: rgba(0, 56, 255, 1);
+  }
+
+  svg {
+    filter: brightness(0%);
+  }
+
+  .contact {
+    color: rgba(86, 87, 88, 1) !important;
+  }
+}
+
+.map_area {
+  background-color: white;
+  overflow: hidden;
+
+  img {
+    height: 884px;
+    border-radius: 56px;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+.contactCenter {
+  background-color: white;
+  padding-top: 144px;
+  padding-bottom: 144px;
+  border-bottom-left-radius: 56px;
+  border-bottom-right-radius: 56px;
+  .contact_area {
+    display: grid;
+    grid-template-columns: max-content 1024px;
+    justify-content: space-between;
+
+    .contact_left {
+      p {
+        font-family: NeueRegular;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22.7px;
+        letter-spacing: 0.16px;
+        color: rgba(62, 63, 64, 1);
+      }
+    }
+
+    .contact_right {
+      flex: 0 0 1024px;
+
+      h3 {
+        font-family: NeueRegular;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 100%;
+        letter-spacing: -0.2px;
+        color: rgba(38, 39, 40, 1);
+        margin-bottom: 48px;
+      }
+
+      .form_group {
+        position: relative;
+
+        label {
+          transition: all ease 0.2s;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          position: absolute;
+
+          span:nth-child(1) {
+            font-family: Neueregular;
+            font-weight: 400;
+            font-size: 18px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: 0.16px;
+            color: rgba(38, 39, 40, 1);
+          }
+
+          span:nth-child(2) {
+            color: rgba(0, 56, 255, 1);
+            display: inline-block;
+            margin-left: 4px;
+          }
+        }
+      }
+
+      .form_row {
+        display: flex;
+        gap: 64px;
+
+        & > * {
+          flex: 1;
+        }
+      }
+
+      input {
+        width: 100%;
+        padding: 33.5px 0;
+        border: unset;
+        outline: unset;
+        border-bottom: 1px solid rgba(231, 231, 231, 1);
+        font-family: Neueregular;
+        font-weight: 400;
+        font-size: 18px;
+        leading-trim: Cap height;
+        line-height: 100%;
+        letter-spacing: 0.16px;
+        color: rgba(38, 39, 40, 1);
+      }
+
+      input:not(:placeholder-shown) ~ label,
+      input:focus ~ label {
+        transform: translateY(-35px);
+      }
+
+      .project {
+        margin-top: 96px;
+
+        .otpravit_area {
+          .left {
+            span {
+              font-family: "NeueRegular";
+              font-weight: 400;
+              font-size: 32px;
+              leading-trim: Cap height;
+              line-height: 100%;
+              letter-spacing: 20%;
+              color: rgba(38, 39, 40, 1);
+              display: block;
+            }
+
+            .left_flex {
+              display: flex;
+              align-items: center;
+              gap: 16px;
+            }
+          }
+
+          margin-top: 96px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .right {
+            flex: 0 0 319px;
+
+            p {
+              font-family: "NeueMedium";
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 19px;
+              letter-spacing: 0.4px;
+            }
+          }
+        }
+      }
+
+      h2 {
+        font-family: NeueRegular;
+        font-weight: 400;
+        font-size: 18px;
+        leading-trim: Cap height;
+        line-height: 100%;
+        letter-spacing: 0.16px;
+        color: rgba(38, 39, 40, 1);
+        margin-bottom: 57.5px;
+      }
+
+      .project_area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+          list-style: none;
+
+          li {
+            font-family: NeueRegular;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 19px;
+            letter-spacing: 0.4px;
+            color: rgba(38, 39, 40, 1);
+          }
+        }
+        .add_button button {
+          background: rgba(38, 39, 40, 1);
+          padding: 17.5px 16px;
+          border-radius: 60px;
+          span {
+            font-family: NeueRegular;
+            font-weight: 400;
+            font-size: 18px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: 0.16px;
+            color: white;
+          }
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          span:nth-child(2) {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.dropDownMode{
+  padding: 0;
+  padding-bottom: 32px;
+  @include res(mobsm){
+    .dropdownContainer{
+      padding: 0px !important;
+    }
+  }
+}

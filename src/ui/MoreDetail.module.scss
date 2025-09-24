@@ -1,0 +1,21 @@
+@use "../mixins/responsive" as *;
+.container {
+  display: flex;
+  align-items: center;
+  gap: 5.5px;
+  span {
+    font-family: "NeueRegular" !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    leading-trim: Cap height;
+    line-height: 100%;
+    letter-spacing: 10%;
+    @include res(mobsm) {
+      font-weight: 400;
+      font-size: 16px!important;
+      leading-trim: Cap height;
+      line-height: 100%;
+      letter-spacing: 10%;
+    }
+  }
+}

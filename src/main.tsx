@@ -1,0 +1,11 @@
+import { createRoot } from 'react-dom/client'
+import './general.scss'
+import App from './App.tsx'
+
+
+
+createRoot(document.getElementById('root')!).render(
+  // <StrictMode>
+    <App />
+  // </StrictMode>,
+)

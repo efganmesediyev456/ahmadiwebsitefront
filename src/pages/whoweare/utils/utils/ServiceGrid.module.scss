@@ -1,0 +1,71 @@
+@use '../../../../mixins/responsive.scss' as *;
+
+.grid_items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include res(mob) {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    padding: 48px 32px;
+    border: 1px solid rgba(231, 231, 231, 1);
+    border-radius: 56px;
+    @include res(mob) {
+      padding: 30px 20px;
+      border-radius: 32px;
+    }
+
+    p:nth-child(1) {
+      color: rgba(0, 56, 255, 1);
+      font-family: NeueRegular;
+      font-weight: 500;
+      font-size: 24px;
+      leading-trim: Cap height;
+      line-height: 100%;
+      letter-spacing: 0px;
+      margin-bottom: 48px;
+
+      @include res(mob) {
+        font-weight: 500;
+        font-size: 18px;
+        leading-trim: Cap height;
+        line-height: 100%;
+        letter-spacing: 0px;
+        margin-bottom: 30px;
+      }
+    }
+
+    p:nth-child(2) {
+      font-family: NeueMedium;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 34.1px;
+      letter-spacing: 0px;
+      color: rgba(255, 255, 255, 1);
+      margin-bottom: 32px;
+      @include res(mob) {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25.5px;
+        letter-spacing: 0.16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    p:nth-child(3) {
+      font-family: "NeueRegular";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.16px;
+      color: rgba(207, 207, 207, 1);
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,267 @@
+@use '../../../mixins/responsive.scss' as *;
+.container {
+  background-color: white;
+  border-radius: 56px;
+  padding: 144px 0 96px 0;
+  @include res(mob) {
+    border-radius: 32px;
+    padding: 88px 0 60px 0;
+  }
+  @include res(tab) {
+    border-radius: 36px;
+    padding-top: 112px;
+    padding-bottom: 72px;
+  }
+
+  .leftTitle {
+    margin-bottom: 48px;
+    max-width: 640px;
+
+    @include res(mob) {
+      margin-bottom: 30px;
+      margin-bottom: 0;
+    }
+    @include res(tab) {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-family: NeueRegular;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22.7px;
+      letter-spacing: 0.16px;
+      margin-bottom: 24px;
+      color: rgba(38, 39, 40, 1);
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.08px;
+        margin-bottom: 16px;
+      }
+      @include res(tab) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19.9px;
+        letter-spacing: 0.08px;
+        margin-bottom: 18px;
+      }
+    }
+
+    span {
+      font-family: Neueregular;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 100%;
+      letter-spacing: -0.2px;
+      color: rgba(38, 39, 40, 1);
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0px;
+      }
+      @include res(tab) {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: -0.2px;
+      }
+    }
+  }
+}
+
+.design {
+  padding-top: 84px;
+  display: flex;
+  gap: 56px;
+  align-items: center;
+  @include res(mob) {
+    flex-direction: column;
+    gap: 0;
+    padding-top: 90px;
+  }
+  @include res(tab) {
+    padding-top: 108px;
+    gap: 48px;
+  }
+
+  .left_design {
+    flex: 0 0 514px;
+    @include res(mob) {
+      flex: 0 0 auto;
+    }
+    @include res(tab) {
+      flex: 0 0 300px;
+    }
+
+    .number {
+      font-family: Neueregular;
+      font-weight: 500;
+      font-size: 22px;
+      leading-trim: Cap height;
+      line-height: 100%;
+      letter-spacing: 0px;
+      color: rgba(0, 56, 255, 1);
+      margin-bottom: 22px;
+      @include res(mob) {
+        font-weight: 500;
+        font-size: 18px;
+        leading-trim: Cap height;
+        line-height: 100%;
+        letter-spacing: 0px;
+        margin-bottom: 16px;
+      }
+      @include res(tab) {
+        font-weight: 500;
+        font-size: 20px;
+        leading-trim: Cap height;
+        line-height: 100%;
+        letter-spacing: 0px;
+        margin-bottom: 18px;
+      }
+    }
+
+    .name {
+      font-family: Neueregular;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 100%;
+      letter-spacing: -0.2px;
+      color: rgba(38, 39, 40, 1);
+      margin-bottom: 14px;
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        margin-bottom: 10px;
+      }
+      @include res(tab) {
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 100%;
+        letter-spacing: -0.2px;
+        margin-bottom: 14px;
+      }
+    }
+
+    .content {
+      font-family: "Neueregular";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.16px;
+      color: rgba(62, 63, 64, 1);
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.24px;
+        padding-bottom: 30px;
+      }
+      @include res(tab){
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.16px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .right_design {
+    flex: 1;
+    .accordion {
+      border-top: 1px solid rgba(231, 231, 231, 1);
+
+      &:last-of-type {
+        border-bottom: 1px solid rgba(231, 231, 231, 1);
+      }
+
+      padding: 28px 0;
+      @include res(mob) {
+        padding: 24px 0;
+      }
+      @include res(tab){
+        padding: 24px 0;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span:nth-child(1) {
+          font-family: NeueMedium;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 25.5px;
+          letter-spacing: 0.16px;
+          vertical-align: middle;
+          color: rgba(38, 39, 40, 1);
+        }
+      }
+
+      .content {
+        p {
+          max-width: 570px;
+          font-family: NeueRegular;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          letter-spacing: 0.24px;
+          color: rgba(62, 63, 64, 1);
+        }
+      }
+    }
+  }
+}
+.containerDark {
+  background: rgba(38, 39, 40, 1);
+  border-radius: 56px;
+  padding: 84px 0;
+
+  @include res(mob) {
+    padding: 60px 0;
+    .design {
+      padding-top: 0px !important;
+    }
+  }
+  @include res(tab) {
+    padding: 72px 0;
+    .design {
+      padding-top: 0px !important;
+    }
+  }
+
+
+
+  .name {
+    color: rgba(255, 255, 255, 1) !important;
+  }
+  .content {
+    color: rgba(207, 207, 207, 1) !important;
+  }
+  .title span {
+    color: white !important;
+  }
+  .content p {
+    color: rgba(207, 207, 207, 1) !important;
+  }
+}
+
+.containerWhite,
+.containerWhite .design {
+  padding: 0px !important;
+}
+.containerWhite {
+  padding: 84px 0 !important;
+}
+
+@include res(tab){
+  .containerWhite {
+    padding: 72px 0 !important;
+  }
+}

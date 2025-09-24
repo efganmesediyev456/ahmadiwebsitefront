@@ -1,0 +1,33 @@
+@use '../../../../mixins/responsive.scss' as *;
+.container{
+    margin-top:96px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 96px;
+    @include res(mob){
+        grid-template-columns: 1fr;
+        margin-top:60px;
+        gap:60px;
+    }
+    img{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 56px;
+        @include res(mob){
+            border-radius: 32px;
+        }
+    }
+    .item:nth-child(1) img, .item:nth-child(4) img,  .item:nth-child(5) img{
+        height: 640px;
+        @include res(mob){
+            height: 208px;
+        }
+    }
+    .item:nth-child(2) img, .item:nth-child(3) img,  .item:nth-child(6) img{
+        height: 448px;
+        @include res(mob){
+            height: 208px;
+        }
+    }
+}

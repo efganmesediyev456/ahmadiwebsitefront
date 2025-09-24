@@ -1,0 +1,51 @@
+@use '../../../mixins/responsive.scss' as *;
+.container {
+  background: rgba(38, 39, 40, 1);
+  border-radius: 56px;
+  padding: 144px 0;
+  @include res(mob) {
+    padding: 88px 0;
+    border-radius: 32px;
+  }
+
+  .titleArea {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 48px;
+    @include res(mob) {
+      flex-direction: column;
+      padding-bottom: 30px;
+    }
+    .title {
+      font-family: "Neueregular";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22.7px;
+      letter-spacing: 0.16px;
+      color: rgba(183, 183, 183, 1);
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.08px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .content {
+      font-family: "NeueRegular";
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 100%;
+      letter-spacing: -0.2px;
+      color: rgba(255, 255, 255, 1);
+      max-width: 1024px;
+      @include res(mob) {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0px;
+      }
+    }
+  }
+}

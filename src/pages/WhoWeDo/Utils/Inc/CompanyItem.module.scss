@@ -1,0 +1,117 @@
+@use '../../../../mixins/responsive.scss' as *;
+.flex {
+  display: flex;
+  gap: 278px;
+  justify-content: space-between;
+  @include res(mob) {
+    flex-direction: column;
+    gap: 16px;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 84px;
+    @include res(mob) {
+      margin-bottom: 60px;
+    }
+    @include res(tab){
+        margin-bottom: 72px;
+    }
+  }
+  @include res(tab) {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .flex1 {
+    font-family: "NeueRegular";
+    font-weight: 600;
+    font-size: 22px;
+    leading-trim: Cap height;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: rgba(0, 56, 255, 1);
+    @include res(mob) {
+      font-weight: 500;
+      font-size: 18px;
+      leading-trim: Cap height;
+      line-height: 100%;
+      letter-spacing: 0px;
+    }
+    @include res(tab) {
+      font-weight: 500;
+      font-size: 20px;
+      leading-trim: Cap height;
+      line-height: 100%;
+      letter-spacing: 0px;
+    }
+  }
+
+  .flex2 {
+    flex: 0 0 911px;
+    @include res(mob) {
+      flex: 0 0 auto;
+    }
+    @include res(tab){
+        flex:0 0 auto;
+    }
+
+    .flex_title {
+      font-family: "NeueMedium";
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 31.2px;
+      letter-spacing: 0px;
+      vertical-align: middle;
+      color: rgba(38, 39, 40, 1);
+      margin-bottom: 22px;
+
+      @include res(mob) {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25.5px;
+        letter-spacing: 0.16px;
+        vertical-align: middle;
+      }
+      @include res(tab) {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28.4px;
+        letter-spacing: 0.16px;
+        vertical-align: middle;
+      }
+    }
+    ul {
+      list-style: none;
+      width: 100%;
+
+      li {
+        width: 100%;
+        display: flex;
+        gap: 165px;
+        padding: 28px 0;
+        @include res(mob) {
+          gap: 140px;
+          padding: 20px 0;
+        }
+        @include res(tab){
+            padding:24px 0;
+            gap:72px;
+        }
+        &:not(:last-of-type) {
+          border-top: 1px solid rgba(231, 231, 231, 1);
+        }
+        &:last-of-type {
+          border-top: 1px solid rgba(231, 231, 231, 1);
+          border-bottom: 1px solid rgba(231, 231, 231, 1);
+        }
+        span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19.9px;
+          letter-spacing: 0.08px;
+          vertical-align: middle;
+          color: rgba(62, 63, 64, 1);
+        }
+      }
+    }
+  }
+}

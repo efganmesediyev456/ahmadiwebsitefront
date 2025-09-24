@@ -1,0 +1,129 @@
+@use '../../../mixins/responsive.scss' as *;
+.container {
+    background-color: white;
+    border-radius: 56px;
+    padding-top: 144px;
+    @include res(mob){
+        padding-top:88px;
+        border-radius: 32px;
+    }
+
+    .firstSection {
+        display: flex;
+        padding-bottom: 144px;
+        gap: 32px;
+        justify-content: space-between;
+        @include res(mob){
+            flex-direction: column;
+            gap:16px;
+            padding-bottom: 88px;
+        }
+
+        .company_information {
+            font-family: "NeueRegular";
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 22.7px;
+            letter-spacing: 0.16px;
+            @include res(mob){
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 17px;
+                letter-spacing: 0.08px;
+            }
+        }
+
+        .twoAreaTitle {
+            font-family: "NeueRegular";
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 100%;
+            letter-spacing: -0.2px;
+            color: rgba(38, 39, 40, 1);
+            margin-bottom: 96px;
+            @include res(mob){
+                margin-bottom: 30px;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 100%;
+                letter-spacing: 0px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid rgba(231, 231, 231, 1)
+            }
+        }
+
+        .twoSection {
+            max-width: 1024px;
+
+            .twoArea {
+                display: flex;
+                justify-content: space-between;
+                gap: 48px;
+                @include res(mob){
+                    gap:30px;
+                }
+
+                p {
+                    font-family: "NeueRegular";
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28px;
+                    letter-spacing: 0.16px;
+                    color: rgba(62, 63, 64, 1);
+                    @include res(mob){
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 21px;
+                        letter-spacing: 0.24px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .yearSection {
+        display: flex;
+        justify-content: space-between;
+
+        padding-bottom: 144px;
+        @include res(mob){
+            padding-bottom: 88px;
+        }
+        .item {
+            .title {
+                font-family: NeueRegular;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22.7px;
+                letter-spacing: 0.16px;
+                color: rgba(86, 87, 88, 1);
+
+                margin-bottom: 48px;
+                @include res(mob){
+                    margin-bottom: 30px;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 17px;
+                    letter-spacing: 0.08px;
+                }
+            }
+            .number{
+                font-family: NeueRegular;
+                font-weight: 400;
+                font-size: 263px;
+                leading-trim: Cap height;
+                line-height: 100%;
+                letter-spacing: -5px;
+                color: rgba(38, 39, 40, 1);
+                @include res(mob){
+                    font-weight: 400;
+                    font-size: 69px;
+                    leading-trim: Cap height;
+                    line-height: 100%;
+                    letter-spacing: -1.5px;
+                }
+            }
+        }
+    }
+}

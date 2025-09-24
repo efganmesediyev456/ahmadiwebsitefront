@@ -1,0 +1,52 @@
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .filter_left {
+        display: flex;
+        gap: 32px;
+    }
+    margin-bottom: 48px;
+}
+
+select {
+    appearance: none;
+    /* Default stilin qarşısını alır */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* border: 2px solid #ccc; */
+    /* border-radius: 8px; */
+    /* padding: 10px 15px; */
+    /* font-size: 16px; */
+    border:none;
+    cursor: pointer;
+    width: 180px;
+    /* En */
+    outline: none;
+    transition: all 0.3s ease;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23262728' strokeWidth='1.25' strokeLinecap='round' strokeLinejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+
+
+    font-weight: 400;
+    font-size: 18px;
+    leading-trim: Cap height;
+    line-height: 100%;
+    letter-spacing: 0.16px;
+    color: rgba(38, 39, 40, 1);
+
+
+}
+
+select:hover {
+    border-color: #999;
+}
+
+select:focus {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 6.5L6 1.5L11 6.5' stroke='%23262728' strokeWidth='1.25' strokeLinecap='round' strokeLinejoin='round'/%3E%3C/svg%3E%0A");
+}
+

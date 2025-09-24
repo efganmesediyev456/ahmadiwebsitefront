@@ -1,0 +1,86 @@
+@use '../../../../mixins/responsive.scss' as *;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @include res(mobsm) {
+    grid-template-columns: 1fr;
+  }
+  @include res(mobmd){
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    border: 1px solid rgba(231, 231, 231, 1);
+    padding: 48px 32px;
+    border-radius: 56px;
+    @include res(mobsm) {
+      padding: 30px 20px;
+    }
+
+    @include res(mobmd) {
+      padding: 30px 20px;
+      border-radius: 32px;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      @include res(mobsm) {
+        margin-bottom: 20px;
+      }
+
+      @include res(mobmd) {
+        margin-bottom: 20px;
+        svg{
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      p {
+        font-family: "NeueMedium";
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 34.1px;
+        letter-spacing: 0px;
+        color: rgba(38, 39, 40, 1);
+        @include res(mobsm) {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 25.5px;
+          letter-spacing: 0.16px;
+        }
+        @include res(mobmd) {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 25.5px;
+          letter-spacing: 0.16px;
+        }
+      }
+    }
+
+    .content {
+      font-family: "NeueRegular";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.16px;
+      color: rgba(62, 63, 64, 1);
+      @include res(mobsm) {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: 0.4px;
+      }
+      @include res(mobmd) {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+}

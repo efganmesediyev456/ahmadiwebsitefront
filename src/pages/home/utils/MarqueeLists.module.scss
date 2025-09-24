@@ -1,0 +1,82 @@
+@use '../../../mixins/responsive.scss' as *;
+
+.item img{
+    max-width: 240px;
+    max-height: 188px;
+    object-fit: contain;
+}
+.container {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 56px;
+    padding: 144px 0;
+    @include res(mobsm){
+        padding: 88px 0;
+        border-radius: 32px;
+        overflow: hidden;
+    }
+    @include res(mobmd){
+        padding: 88px 0;
+        border-radius: 32px;
+        overflow: hidden;
+    }
+
+    .title {
+        display: flex;
+        gap:293px;
+        justify-content: space-between;
+        margin-bottom: 48px;
+        @include res(mobsm){
+            flex-direction: column;
+            gap:16px;
+            margin-bottom: 30px;
+        }
+        @include res(mobmd){
+            flex-direction: column;
+            gap:16px;
+            margin-bottom: 30px;
+        }
+        p {
+            font-family: "NeueRegular";
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22.7px;
+            letter-spacing: 0.16px;
+            color: rgba(86, 87, 88, 1);
+            @include res(mobsm){
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 17px;
+                letter-spacing: 0.08px;
+            }
+            @include res(mobmd){
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 17px;
+                letter-spacing: 0.08px;
+            }
+        }
+        span{
+            font-family: "NeueRegular";
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 100%;
+            letter-spacing: -0.2px;
+            color: rgba(38, 39, 40, 1);
+            @include res(mobsm){
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 100%;
+                letter-spacing: 0px;
+            }
+            @include res(mobmd){
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 100%;
+                letter-spacing: 0px;
+            }
+        }
+    }
+    .marqueList{
+        display: flex;
+    }
+}

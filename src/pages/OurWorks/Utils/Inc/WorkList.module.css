@@ -1,0 +1,33 @@
+.grid_lists {
+    margin-top: 96px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 96px;
+    align-items: center;
+
+    .grid_item {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 56px;
+        }
+
+        &:nth-child(1), &:nth-child(4), &:nth-child(5), &:nth-child(8), &:nth-child(9), &:nth-child(12) {
+            height: 640px;
+        }
+
+        &:nth-child(2), &:nth-child(3), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(11) {
+            height: 448px;
+        }
+
+        p {
+            font-family: NeueMedium;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 34.1px;
+            letter-spacing: 0px;
+            margin-top:24px;
+        }
+    }
+}

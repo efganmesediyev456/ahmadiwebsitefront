@@ -1,0 +1,18 @@
+.commercies_list {
+    display: flex;
+    column-gap: 8px;
+    row-gap: 16px;
+    flex-wrap: wrap;
+}
+
+.commercy_item {
+    font-family: NeueRegular;
+    padding: 32px 40px;
+    border: 1px solid rgba(231, 231, 231, 1);
+    border-radius: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.16px;
+    color: rgba(38, 39, 40, 1);
+}
