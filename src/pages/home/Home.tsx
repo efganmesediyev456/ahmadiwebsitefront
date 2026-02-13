@@ -41,22 +41,24 @@ const Home = () => {
   }, [showDropdown]);
 
   return (
-    <PrettyLoader pageName={t('home_page')} loading={loading}>
-      <DropDownMenu
-        showDropdown={showDropdown}
-        handleHeaderClick={handleHeaderClick}
-      />
-      <Header handleHeaderClick={handleHeaderClick} />
-      <Banner />
-      <HomeDetail />
-      <MobileProgram />
-      <Service />
-      <CardItems />
-      <Company />
-      <MarqueeLists />
-      <Footer type={undefined} show={undefined} />
-      <SiteArrow />
-    </PrettyLoader>
+    // <PrettyLoader pageName={t('home_page')} loading={loading}>
+     <>
+         <DropDownMenu
+             showDropdown={showDropdown}
+             handleHeaderClick={handleHeaderClick}
+         />
+         <Header handleHeaderClick={handleHeaderClick} />
+         <Banner />
+         <HomeDetail />
+         <MobileProgram />
+         <Service />
+         <CardItems />
+         <Company />
+         <MarqueeLists />
+         <Footer type={undefined} show={undefined} />
+         <SiteArrow />
+     </>
+    // </PrettyLoader>
   );
 };
 

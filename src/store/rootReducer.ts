@@ -14,6 +14,8 @@ import { teamsApi } from "./services/teamsApi";
 import { managementsApi } from "./services/managementsApi";
 import { ourStudioGalleryApi } from "./services/ourStudioGalleryApi";
 import { companyAndDesignApi } from "./services/companyAndDesignApi";
+import {uslugiItemApi} from "./services/uslugiItemApi.ts";
+import {sourceOptionApi} from "./services/sourceOptionApi.ts";
 
 const rootReducer = combineReducers({
   banner: bannerReducer,
@@ -31,6 +33,8 @@ const rootReducer = combineReducers({
   [managementsApi.reducerPath]: managementsApi.reducer,
   [companyAndDesignApi.reducerPath]: companyAndDesignApi.reducer,
   [companyTeamAboutApi.reducerPath]: companyTeamAboutApi.reducer,
+  [uslugiItemApi.reducerPath]: uslugiItemApi.reducer,
+  [sourceOptionApi.reducerPath]: sourceOptionApi.reducer,
 });
 
 export default rootReducer;

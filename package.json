@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "http://localhost:8000",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -11,6 +12,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
+    "@splidejs/react-splide": "^0.7.12",
     "@types/react-redux": "^7.1.34",
     "axios": "^1.11.0",
     "classnames": "^2.5.1",
@@ -18,11 +20,13 @@
     "gsap": "^3.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-phone-input-2": "^2.15.1",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.4.0",
+    "react-toastify": "^11.0.5",
     "rxjs": "^7.8.2",
     "split-type": "^0.3.4",
-    "swiper": "^11.2.6",
+    "swiper": "^11.2.10",
     "yallist": "^5.0.0"
   },
   "devDependencies": {

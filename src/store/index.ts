@@ -13,6 +13,8 @@ import { teamsApi } from "./services/teamsApi";
 import { managementsApi } from "./services/managementsApi";
 import { ourStudioGalleryApi } from "./services/ourStudioGalleryApi";
 import { companyAndDesignApi } from "./services/companyAndDesignApi";
+import { uslugiItemApi } from "./services/uslugiItemApi";
+import {sourceOptionApi} from "./services/sourceOptionApi.ts";
 
 export const store = configureStore({
   reducer: rootReducer,
@@ -32,6 +34,8 @@ export const store = configureStore({
       .concat(managementsApi.middleware)
       .concat(ourStudioGalleryApi.middleware)
       .concat(companyAndDesignApi.middleware)
+      .concat(sourceOptionApi.middleware)
+      .concat(uslugiItemApi.middleware)
       .concat(mobilProgramApi.middleware),
 });
 

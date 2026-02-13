@@ -14,6 +14,7 @@ import WhoWeDo from "./pages/WhoWeDo/WhoWeDo";
 import OurWorks from "./pages/OurWorks/OurWorks";
 import WorkPageDetail from "./pages/WorkPageDetail/WorkPageDetail";
 import Contact from "./pages/Contact/Contact";
+import ApplyProject from "./pages/ApplyProject/ApplyProject";
 
 
 
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="ourworks" element={<OurWorks key={location.pathname} />} />
             <Route path="ourworks/:slug" element={<WorkPageDetail key={location.pathname} />} />
             <Route path="contact" element={<Contact key={location.pathname} />} />
+            <Route path="apply-project" element={<ApplyProject key={location.pathname} />} />
           </Route>
 
           <Route 

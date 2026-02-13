@@ -48,7 +48,9 @@
     display: flex;
     align-items: center;
     .languages {
-      a {
+      cursor: pointer;
+      position: relative;
+      div,a {
         font-size: 14px;
         line-height: 19.9px;
         font-weight: 400;
@@ -71,7 +73,12 @@
         }
       }
       .language_dropdown {
-        display: none;
+          flex-direction: column;
+          display: none;
+          position: absolute;
+          &.active{
+            display: flex;
+          }
       }
     }
     display: flex;

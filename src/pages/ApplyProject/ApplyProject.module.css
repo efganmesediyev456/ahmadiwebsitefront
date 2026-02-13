@@ -1,0 +1,239 @@
+.container{
+    background: white;
+    padding-top:96px;
+    padding-bottom: 96px;
+    .apply_title{
+        padding-bottom: 96px;
+        h1{
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 72px;
+            leading-trim: NONE;
+            line-height: 84px;
+            letter-spacing: -1.5px;
+            font-family: NeueRegular;
+            max-width: 56%;
+            margin-bottom: 96px;
+        }
+        .right{
+            display: flex;
+            justify-content: flex-end;
+            p{
+                font-family: TT Firs Neue Trial Var Roman;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 18px;
+                leading-trim: NONE;
+                line-height: 28px;
+                letter-spacing: 0.16px;
+                font-family: NeueRegular;
+                max-width: 511px;
+            }
+        }
+    }
+
+    .form{
+        display: flex;
+        .left_form{
+            flex:0.5;
+        }
+        .right_form{
+            flex:4;
+        }
+    }
+
+    .right_form{
+        .form_title{
+            p{
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 38px;
+                leading-trim: NONE;
+                line-height: 100%;
+                letter-spacing: -0.2px;
+                font-family: NeueRegular;
+                color:#262728;
+                margin-bottom: 48px;
+            }
+        }
+        .form_row{
+            display: flex;
+            width: 100%;
+            gap:64px;
+            margin-bottom: 24px;
+            & > * {
+                flex: 1;
+            }
+        }
+        .formGroup{
+            margin-bottom: 24px;
+            label{
+                display: block;
+                font-family: NeueRegular;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 18px;
+                leading-trim: CAP_HEIGHT;
+                line-height: 100%;
+                letter-spacing: 0.16px;
+                span{
+                    font-family: NeueRegular;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 18px;
+                    leading-trim: CAP_HEIGHT;
+                    line-height: 100%;
+                    letter-spacing: 0.16px;
+                    color: #0038FF;
+                }
+            }
+            input.formControl{
+                width: 100%;
+                padding: 15px;
+                padding-left: 10px;
+                angle: 0 deg;
+                opacity: 1;
+                border: unset;
+                border-bottom: 1px solid #E7E7E7;
+                outline: unset;
+            }
+            .phoneControl{
+                border: unset;
+                border-bottom: 1px solid #E7E7E7;
+                *{
+                    font-family: NeueRegular;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 18px;
+                    leading-trim: CAP_HEIGHT;
+                    line-height: 100%;
+                    letter-spacing: 0.16px;
+                }
+            }
+            :global(.flag-dropdown) {
+                border: unset !important;
+                background: unset !important;
+            }
+            :global(.react-tel-input ),input {
+                height: 100%;
+            }
+        }
+        .vashiArea{
+            margin-bottom: 96px;
+        }
+        .uslugiItems{
+            margin-bottom: 96px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:8px;
+            .uslugiItem{
+                border: 1px solid #E7E7E7;
+                font-family: NeueRegular;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 18px;
+                leading-trim: CAP_HEIGHT;
+                line-height: 100%;
+                letter-spacing: 0.16px;
+                color:#262728;
+                padding-top: 36px;
+                padding-right: 44px;
+                padding-bottom: 36px;
+                padding-left: 44px;
+                border-radius: 28px;
+            }
+        }
+
+        .filesArea{
+            margin-bottom: 96px;
+            h4{
+                font-family: NeueRegular;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 18px;
+                leading-trim: CAP_HEIGHT;
+                line-height: 100%;
+                letter-spacing: 0.16px;
+                padding:33px 0;
+            }
+            .filesInput{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                ul{
+                    list-style: none;
+                    li{
+                        font-family: NeueRegular;
+                        font-weight: 500;
+                        font-style: Medium;
+                        font-size: 12px;
+                        line-height: 19px;
+                        letter-spacing: 0.4px;
+                        color:#262728;
+                    }
+                }
+                .fileInput{
+                    background: #262728;
+                    display: flex;
+                    align-items: center;
+                    padding: 17.5px 16px;
+                    border-radius: 60px;
+                    label{
+                        font-family: NeueRegular;
+                        font-weight: 400;
+                        font-style: Regular;
+                        font-size: 18px;
+                        leading-trim: CAP_HEIGHT;
+                        line-height: 100%;
+                        letter-spacing: 0.16px;
+                        color:#FFFFFF;
+                    }
+                    input{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .otpravitArea{
+            display: flex;
+            gap:206px;
+            .submitButton{
+                background: unset;
+                border: unset;
+                display: flex;
+                align-items: center;
+                gap:16px;
+                span{
+                    display: block;
+                    width: max-content;
+                    font-weight: 400;
+                    font-size: 32px;
+                    leading-trim: CAP_HEIGHT;
+                    line-height: 100%;
+                    font-family: NeueRegular;
+                    color:#262728;
+                    letter-spacing: 12px;
+
+                }
+            }
+            .otpravitText{
+                p{
+                    font-family: NeueRegular;
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 12px;
+                    leading-trim: NONE;
+                    line-height: 19px;
+                    letter-spacing: 0.4px;
+                }
+            }
+        }
+    }
+}
+
+
+.active{
+    background: black;
+    color:white!important;
+}

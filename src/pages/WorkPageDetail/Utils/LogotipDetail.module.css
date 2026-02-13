@@ -1,0 +1,68 @@
+.background {
+    .container {
+        border-radius: 56px;
+        padding: 144px 0 0 0;
+        background: #262728;
+        .title_row{
+            h2{
+                font-weight: 500;
+                font-size: 24px;
+                leading-trim: NONE;
+                line-height: 34.1px;
+                letter-spacing: 0px;
+                color:#FFFFFF;
+                font-family: NeueRegular;
+                margin-bottom: 16px;
+            }
+            div{
+                font-family: NeueRegular;
+                font-weight: 400;
+                font-size: 20px;
+                leading-trim: NONE;
+                line-height: 32.5px;
+                letter-spacing: 0.16px;
+                color:#CFCFCF;
+                max-width: 672px;
+            }
+            padding-bottom: 144px;
+            img{
+                border-radius: 56px;
+                width: 100%;
+                margin-top:56px;
+            }
+        }
+        .title_row2{
+            .title_row2_title{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 48px;
+                h2{
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 24px;
+                    leading-trim: NONE;
+                    line-height: 34.1px;
+                    letter-spacing: 0px;
+                    font-family: NeueRegular;
+                    color:#FFFFFF;
+                }
+                p{
+                    font-family: NeueRegular;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 20px;
+                    leading-trim: NONE;
+                    line-height: 32.5px;
+                    letter-spacing: 0.16px;
+                    color:#CFCFCF;
+                    flex-basis: 960px;
+                }
+            }
+            img{
+                border-radius: 56px;
+                width: 100%;
+            }
+            margin-bottom: 144px;
+        }
+    }
+}

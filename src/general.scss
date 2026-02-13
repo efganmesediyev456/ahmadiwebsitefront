@@ -121,3 +121,36 @@ body.scrollHidden::-webkit-scrollbar{
 .dropdown-menu--visible{
   display: block!important;
 }
+
+
+
+.splide__slide img {
+  width: 100%;
+
+}
+
+
+.splideGeneral .splide__track{
+  border-radius: 56px!important;
+
+
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 16px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #868787;
+    border-radius: 56px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #868787;
+  }
+}

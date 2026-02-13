@@ -10,17 +10,19 @@ interface FooterProps {
   dropdown?:boolean;
 }
 
+
+
 const Footer: React.FC<FooterProps> = ({ type, show, dropdown }) => {
   const isWhiteMode = type === "white";
   const isShowContact = show === "contact";
   const isDropDown = dropdown === true ? true : false;
-  const { lang } = useParams<{ lang: string }>();
-  const { data } = useGetSettingsQuery(lang);
+    const { lang } = useParams<{ lang: string }>();
+
+    const { data } = useGetSettingsQuery(lang);
   const { t, isLoading: isTranslate } = useTranslations();
-  
 
 
-  return (
+    return (
     <>
       <footer
         className={`${styles.footer} ${isWhiteMode ? styles.whiteMode : ""}  ${isDropDown ? styles.dropDownMode : ""}`}
@@ -329,20 +331,23 @@ const Footer: React.FC<FooterProps> = ({ type, show, dropdown }) => {
 
       {isShowContact && (
         <>
-          <div className={styles.map_area}>
-            <img src="/contact/map.png" alt="" />
-          </div>
+            <div className={styles.map_area}>
+                <iframe
+                    src={data?.map_url}
+                    allowFullScreen="" loading="lazy" className={styles.iframeMap}
+                    referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
-          <div className={styles.contactCenter}>
-            <div className="container">
-              <div className={styles.contact_area}>
-                <div className={styles.contact_left}>
-                  <p>START A PROJECT</p>
-                </div>
-                <div className={styles.contact_right}>
-                  <h3>Ваши контакты</h3>
-                  <form>
-                    <div className={styles.form_row}>
+            <div className={styles.contactCenter}>
+                <div className="container">
+                    <div className={styles.contact_area}>
+                        <div className={styles.contact_left}>
+                            <p>START A PROJECT</p>
+                        </div>
+                        <div className={styles.contact_right}>
+                            <h3>Ваши контакты</h3>
+                            <form>
+                                <div className={styles.form_row}>
                       <div className={styles.form_group}>
                         <input type="text" placeholder="" />
                         <label htmlFor="">
